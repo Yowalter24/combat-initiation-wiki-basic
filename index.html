@@ -1071,6 +1071,128 @@
   .picker-item img { width: 52px; height: 52px; image-rendering: pixelated; }
   .picker-item .pi-name { font-family: 'Press Start 2P', monospace; font-size: 7px; line-height: 1.3; }
   .picker-item .pi-cost { font-size: 13px; color: var(--roblox-red); }
+
+  /* ========== DARK MODE ========== */
+  body.dark-mode {
+    --paper: #1A1208;
+    --paper-dark: #241A0E;
+    --ink: #F5E9D0;
+    --stud: #C9A876;
+    --brick-tan: #3D2E1A;
+    --brick-tan-dark: #2A1E0E;
+    --leaf-green: #4CAF50;
+    background-image:
+      radial-gradient(circle at 15px 15px, rgba(201,168,118,0.08) 3px, transparent 3.5px),
+      linear-gradient(135deg, #1A1208 0%, #241A0E 100%);
+    color: var(--ink);
+  }
+  body.dark-mode .top-bar { background: #0D0805; border-bottom-color: var(--roblox-red); }
+  body.dark-mode .masthead { background: linear-gradient(180deg, #1A1208 0%, #0D0805 100%); }
+  body.dark-mode nav.tabs { background: #0D0805; }
+  body.dark-mode nav.tabs a { background: #1A1208; color: var(--stud); }
+  body.dark-mode nav.tabs a.active { background: #241A0E; color: var(--roblox-red); }
+  body.dark-mode .sidebar, body.dark-mode main.content, body.dark-mode .calc-slots, body.dark-mode .calc-stats { background: #1A1208; border-color: var(--stud); }
+  body.dark-mode .card { background: #241A0E; border-color: var(--stud); }
+  body.dark-mode .card-image { border-color: var(--stud); }
+  body.dark-mode .intro-box { background: #1A1208; border-color: var(--stud); color: var(--stud); }
+  body.dark-mode .filter-bar { background: #0D0805; }
+  body.dark-mode .home-tile { background: #241A0E; border-color: var(--stud); }
+  body.dark-mode .weapon-tree { background: #241A0E; border-color: var(--stud); }
+  body.dark-mode .weapon-base { background: #1A1208; }
+  body.dark-mode .upgrade-card { background: #1A1208; }
+  body.dark-mode .upgrade-img { background: linear-gradient(135deg,#241A0E,#3D2E1A); }
+  body.dark-mode .category-section .stats-panel, body.dark-mode .gear-guarantees, body.dark-mode .calc-warnings { background: #241A0E; }
+  body.dark-mode footer { background: #0D0805; color: var(--stud); }
+  body.dark-mode .keybind-panel { background: #0D0805; }
+  body.dark-mode .keybind-row { background: #1A1208; }
+  body.dark-mode .limit-card { background: #1A1208; }
+  body.dark-mode .build-card { background: #1A1208; border-color: var(--stud); }
+  body.dark-mode .slot { background: #1A1208; }
+  body.dark-mode .picker-modal { background: #1A1208; }
+  body.dark-mode .picker-grid { background: #1A1208; }
+  body.dark-mode .picker-item { background: #241A0E; border-color: var(--stud); }
+  body.dark-mode .picker-item:hover { background: var(--brick-tan); }
+  body.dark-mode .picker-search { background: #241A0E; }
+  body.dark-mode .picker-search input { background: #1A1208; color: var(--ink); }
+  body.dark-mode .calc-slot { background: #241A0E; border-color: var(--stud); }
+  body.dark-mode .calc-slot.empty { background: transparent; }
+  body.dark-mode .budget-bar { background: #241A0E; }
+  body.dark-mode .rec-section { background: linear-gradient(135deg, #241A0E, #3D2E1A); border-color: var(--stud); }
+  body.dark-mode .warning-box { background: #241A0E; }
+  body.dark-mode .sidebar-stat { background: #0D0805; }
+  body.dark-mode .fact-strip { background: #0D0805; }
+  body.dark-mode .beta-banner { background: linear-gradient(135deg,#0D0805,#1A1208); }
+  body.dark-mode .cat-limits .limit-card { background: #1A1208; }
+  body.dark-mode #darkmode-btn { background: var(--stud) !important; color: var(--ink) !important; border-color: var(--ink) !important; }
+
+  /* ========== BUG REPORT MODAL ========== */
+  .bug-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 20000;
+    display: grid; place-items: center; padding: 16px;
+  }
+  .bug-modal {
+    background: var(--paper); border: 4px solid var(--roblox-red); box-shadow: 8px 8px 0 var(--ink);
+    width: 100%; max-width: 520px; overflow: hidden;
+  }
+  .bug-header {
+    background: var(--roblox-red); padding: 10px 14px; display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 3px solid var(--ink);
+  }
+  .bug-header h3 { font-family: 'Press Start 2P', monospace; font-size: 11px; color: white; }
+  .bug-header button { background: var(--ink); color: white; border: 2px solid white; width: 30px; height: 30px; cursor: pointer; font-size: 16px; display: grid; place-items: center; }
+  .bug-body { padding: 16px; }
+  .bug-field { margin-bottom: 12px; }
+  .bug-field label { display: block; font-family: 'Press Start 2P', monospace; font-size: 9px; color: var(--ink); margin-bottom: 6px; }
+  .bug-field select, .bug-field input, .bug-field textarea {
+    width: 100%; padding: 8px 10px; font-family: 'VT323', monospace; font-size: 17px;
+    border: 2px solid var(--ink); background: var(--paper-dark); color: var(--ink); outline: none;
+  }
+  .bug-field textarea { height: 80px; resize: vertical; }
+  .bug-submit {
+    font-family: 'Press Start 2P', monospace; font-size: 10px; padding: 12px 16px;
+    background: var(--leaf-green); color: white; border: 3px solid var(--ink); cursor: pointer;
+    width: 100%; box-shadow: 3px 3px 0 var(--ink); transition: all 0.1s;
+  }
+  .bug-submit:hover { background: #388E3C; transform: translate(-1px,-1px); }
+  .bug-success { text-align: center; padding: 20px; }
+  .bug-success h3 { font-family: 'Press Start 2P', monospace; font-size: 14px; color: var(--leaf-green); margin-bottom: 10px; }
+
+  /* ========== ADMIN PANEL ========== */
+  .admin-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 30000;
+    display: grid; place-items: center; padding: 16px;
+  }
+  .admin-modal {
+    background: var(--ink); color: var(--paper); border: 4px solid var(--roblox-red);
+    box-shadow: 8px 8px 0 var(--roblox-red); width: 100%; max-width: 700px; max-height: 80vh;
+    display: flex; flex-direction: column;
+  }
+  .admin-header {
+    background: var(--roblox-red); padding: 10px 14px; display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 3px solid var(--paper);
+  }
+  .admin-header h3 { font-family: 'Press Start 2P', monospace; font-size: 11px; color: white; }
+  .admin-header button { background: var(--ink); color: white; border: 2px solid white; width: 30px; height: 30px; cursor: pointer; font-size: 16px; display: grid; place-items: center; }
+  .admin-body { padding: 14px; overflow-y: auto; flex: 1; }
+  .admin-login { padding: 20px; text-align: center; }
+  .admin-login h3 { font-family: 'Press Start 2P', monospace; font-size: 12px; color: var(--roblox-red); margin-bottom: 16px; }
+  .admin-login input { width: 100%; padding: 10px; font-family: 'VT323', monospace; font-size: 18px; background: #3D2820; color: var(--paper); border: 2px solid var(--stud); margin-bottom: 8px; outline: none; }
+  .admin-login button { font-family: 'Press Start 2P', monospace; font-size: 10px; padding: 10px; background: var(--roblox-red); color: white; border: 3px solid var(--paper); cursor: pointer; width: 100%; box-shadow: 3px 3px 0 var(--paper); }
+  .admin-login .error { color: #FF6B6B; font-size: 14px; margin-top: 8px; }
+  .report-card {
+    background: #3D2820; border: 2px solid var(--stud); padding: 12px; margin-bottom: 10px;
+  }
+  .report-card .rc-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+  .report-card .rc-type { font-family: 'Press Start 2P', monospace; font-size: 9px; color: var(--roblox-red); background: #1A1208; padding: 3px 6px; }
+  .report-card .rc-time { font-size: 13px; color: var(--stud); }
+  .report-card .rc-desc { font-size: 16px; color: var(--paper); }
+  .report-card .rc-page { font-size: 13px; color: var(--stud); margin-top: 4px; }
+  .admin-stats { display: flex; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+  .admin-stat { background: #3D2820; border: 2px solid var(--roblox-red); padding: 10px 14px; text-align: center; }
+  .admin-stat span { display: block; font-family: 'Press Start 2P', monospace; font-size: 16px; color: var(--roblox-red); }
+  .admin-stat small { font-size: 12px; color: var(--stud); }
+  .admin-clear-btn { font-family: 'Press Start 2P', monospace; font-size: 9px; padding: 8px 12px; background: #B71C1C; color: white; border: 2px solid var(--paper); cursor: pointer; margin-bottom: 12px; }
+
 </style>
 </head>
 <body>
@@ -1079,10 +1201,8 @@
 <div class="top-bar">
   <div><span class="bx-logo">CI</span> COMBAT INITIATION WIKI</div>
   <div class="user-strip">
-    <span>BC Member ✦</span>
-    <span>ROBUX: 42</span>
-    <span>TIX: 1,337</span>
-    <span><a href="#">[ Logout ]</a></span>
+    <span><a href="#" id="bug-report-btn" onclick="openBugReport()">[ ⚠ Report Bug ]</a></span>
+    <span><button id="darkmode-btn" onclick="toggleDark()" style="background:#3D2820;color:#F5E9D0;border:2px solid #F5E9D0;font-family:'Press Start 2P',monospace;font-size:8px;padding:4px 7px;cursor:pointer">☀ LIGHT</button></span>
   </div>
 </div>
 
@@ -1097,10 +1217,7 @@
       <b>Welcome, Bloxxer!</b><br>
       The unofficial fan archive of gear, hats & chaos from the classic Roblox brawler. <b>Gear up. Style on.</b>
     </div>
-    <div class="online-blob">
-      <span class="dot"></span>SERVER ONLINE<br>
-      <span style="color:#B9F6CA">127 PLAYERS</span>
-    </div>
+
   </div>
 </header>
 
@@ -1888,9 +2005,72 @@
 
 <footer>
   <div class="brand">★ COMBAT INITIATION FAN WIKI ★</div>
-  <div>An unofficial archive · Running on pure nostalgia · © 200X <a href="#">[Contact]</a> · <a href="#">[Edit this page]</a></div>
-  <div style="margin-top:6px; font-size:13px; opacity:0.7">Roblox™ is a registered trademark of Roblox Corporation. This is a fan project.</div>
+  <div>A fan wiki made with ❤ by <b style="color:var(--roblox-red)">ZlimBoy</b> · Not affiliated with the developers · Roblox™ is property of Roblox Corp.</div>
+  <div style="margin-top:6px; font-size:13px; opacity:0.7">All game content &amp; assets belong to their respective owners. This is a fan project.</div>
 </footer>
+
+<!-- BUG REPORT MODAL -->
+<div class="bug-overlay" id="bug-overlay" style="display:none">
+  <div class="bug-modal">
+    <div class="bug-header">
+      <h3>⚠ REPORT A BUG</h3>
+      <button onclick="closeBugReport()">✖</button>
+    </div>
+    <div class="bug-body" id="bug-body">
+      <div class="bug-field">
+        <label>BUG TYPE</label>
+        <select id="bug-type">
+          <option value="Calculator">Calculator - wrong stat</option>
+          <option value="Accessory">Accessory - wrong info</option>
+          <option value="Weapon">Weapon - wrong info</option>
+          <option value="Gear">Gear - wrong info</option>
+          <option value="Visual">Visual / display issue</option>
+          <option value="Missing">Missing item</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="bug-field">
+        <label>PAGE</label>
+        <select id="bug-page">
+          <option>Accessories</option>
+          <option>Weapons</option>
+          <option>Gears</option>
+          <option>Loadout Calculator</option>
+          <option>Home</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="bug-field">
+        <label>DESCRIPTION</label>
+        <textarea id="bug-desc" placeholder="Describe what's wrong..."></textarea>
+      </div>
+      <button class="bug-submit" onclick="submitBug()">✔ SUBMIT REPORT</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div class="admin-overlay" id="admin-overlay" style="display:none">
+  <div class="admin-modal">
+    <div class="admin-header">
+      <h3>🔒 ADMIN PANEL</h3>
+      <button onclick="closeAdmin()">✖</button>
+    </div>
+    <div class="admin-body">
+      <div class="admin-login" id="admin-login">
+        <h3>ADMIN LOGIN</h3>
+        <input type="password" id="admin-pass" placeholder="Enter password..." onkeydown="if(event.key==='Enter')checkAdminPass()">
+        <button onclick="checkAdminPass()">LOGIN</button>
+        <div class="error" id="admin-error"></div>
+      </div>
+      <div id="admin-panel" style="display:none">
+        <div class="admin-stats" id="admin-stats"></div>
+        <button class="admin-clear-btn" onclick="clearReports()">🗑 CLEAR ALL REPORTS</button>
+        <div id="admin-reports"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
 // =============================================================
@@ -2791,6 +2971,168 @@ function resetCalc() {
 
 // Init calc
 refreshCalc();
+
+// =============================================================
+// DARK MODE
+// =============================================================
+const ADMIN_PASSWORD = "ZlimBoy2025";
+
+function toggleDark() {
+  const isDark = document.body.classList.toggle('dark-mode');
+  const btn = document.getElementById('darkmode-btn');
+  btn.textContent = isDark ? '☾ DARK' : '☀ LIGHT';
+  localStorage.setItem('ciWikiDark', isDark ? '1' : '0');
+}
+
+// Restore preference
+(function() {
+  if (localStorage.getItem('ciWikiDark') === '1') {
+    document.body.classList.add('dark-mode');
+    const btn = document.getElementById('darkmode-btn');
+    if (btn) btn.textContent = '☾ DARK';
+  }
+})();
+
+// =============================================================
+// BUG REPORT SYSTEM
+// =============================================================
+function openBugReport() {
+  document.getElementById('bug-overlay').style.display = 'grid';
+  document.getElementById('bug-body').innerHTML = `
+    <div class="bug-field"><label>BUG TYPE</label>
+      <select id="bug-type">
+        <option value="Calculator">Calculator - wrong stat</option>
+        <option value="Accessory">Accessory - wrong info</option>
+        <option value="Weapon">Weapon - wrong info</option>
+        <option value="Gear">Gear - wrong info</option>
+        <option value="Visual">Visual / display issue</option>
+        <option value="Missing">Missing item</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    <div class="bug-field"><label>PAGE</label>
+      <select id="bug-page">
+        <option>Accessories</option><option>Weapons</option><option>Gears</option>
+        <option>Loadout Calculator</option><option>Home</option><option>Other</option>
+      </select>
+    </div>
+    <div class="bug-field"><label>DESCRIPTION</label>
+      <textarea id="bug-desc" placeholder="Describe what's wrong..."></textarea>
+    </div>
+    <button class="bug-submit" onclick="submitBug()">✔ SUBMIT REPORT</button>
+  `;
+}
+
+function closeBugReport() {
+  document.getElementById('bug-overlay').style.display = 'none';
+}
+
+function submitBug() {
+  const type = document.getElementById('bug-type').value;
+  const page = document.getElementById('bug-page').value;
+  const desc = document.getElementById('bug-desc').value.trim();
+  if (!desc) { alert('Please describe the bug!'); return; }
+
+  // Save to localStorage
+  const reports = JSON.parse(localStorage.getItem('ciBugReports') || '[]');
+  reports.push({
+    type, page, desc,
+    time: new Date().toLocaleString(),
+    id: Date.now()
+  });
+  localStorage.setItem('ciBugReports', JSON.stringify(reports));
+
+  // Show success
+  document.getElementById('bug-body').innerHTML = `
+    <div class="bug-success">
+      <h3>✔ REPORT SENT!</h3>
+      <p style="font-size:17px">Thanks for helping improve the wiki! The admin will review your report.</p>
+      <button class="bug-submit" style="margin-top:12px;background:var(--roblox-red)" onclick="closeBugReport()">CLOSE</button>
+    </div>
+  `;
+}
+
+// =============================================================
+// ADMIN PANEL
+// =============================================================
+// Secret: triple-click the footer brand name to open admin
+document.addEventListener('DOMContentLoaded', () => {
+  let clicks = 0;
+  const brand = document.querySelector('footer .brand');
+  if (brand) {
+    brand.style.cursor = 'pointer';
+    brand.addEventListener('click', () => {
+      clicks++;
+      if (clicks >= 3) {
+        clicks = 0;
+        openAdmin();
+      }
+      setTimeout(() => { clicks = 0; }, 1000);
+    });
+  }
+});
+
+function openAdmin() {
+  document.getElementById('admin-overlay').style.display = 'grid';
+  document.getElementById('admin-login').style.display = '';
+  document.getElementById('admin-panel').style.display = 'none';
+  document.getElementById('admin-error').textContent = '';
+  document.getElementById('admin-pass').value = '';
+}
+
+function closeAdmin() {
+  document.getElementById('admin-overlay').style.display = 'none';
+}
+
+function checkAdminPass() {
+  const pass = document.getElementById('admin-pass').value;
+  if (pass === ADMIN_PASSWORD) {
+    document.getElementById('admin-login').style.display = 'none';
+    document.getElementById('admin-panel').style.display = '';
+    renderAdminPanel();
+  } else {
+    document.getElementById('admin-error').textContent = '✖ Wrong password!';
+    document.getElementById('admin-pass').value = '';
+  }
+}
+
+function renderAdminPanel() {
+  const reports = JSON.parse(localStorage.getItem('ciBugReports') || '[]');
+  const statsDiv = document.getElementById('admin-stats');
+  const reportsDiv = document.getElementById('admin-reports');
+
+  // Stats
+  const types = {};
+  reports.forEach(r => { types[r.type] = (types[r.type] || 0) + 1; });
+  statsDiv.innerHTML = `
+    <div class="admin-stat"><span>${reports.length}</span><small>Total Reports</small></div>
+    ${Object.entries(types).map(([t,c]) => `<div class="admin-stat"><span>${c}</span><small>${t}</small></div>`).join('')}
+  `;
+
+  // Reports list (newest first)
+  if (reports.length === 0) {
+    reportsDiv.innerHTML = '<p style="color:var(--stud);font-size:16px;text-align:center">No reports yet!</p>';
+  } else {
+    reportsDiv.innerHTML = [...reports].reverse().map(r => `
+      <div class="report-card">
+        <div class="rc-header">
+          <span class="rc-type">${r.type}</span>
+          <span class="rc-time">${r.time}</span>
+        </div>
+        <div class="rc-page">📍 ${r.page}</div>
+        <div class="rc-desc">${r.desc}</div>
+      </div>
+    `).join('');
+  }
+}
+
+function clearReports() {
+  if (confirm('Clear ALL bug reports? This cannot be undone.')) {
+    localStorage.removeItem('ciBugReports');
+    renderAdminPanel();
+  }
+}
+
 </script>
 </body>
 </html>
